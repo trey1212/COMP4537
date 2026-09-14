@@ -20,6 +20,10 @@ class MemoryButton {
         });
     }
 
+    /**
+     * Generates a random RGB color string for the blocks
+     * @returns random rgb string for blocks
+     */
     generateRandomColor() {
         const r = Math.floor(Math.random() * 256);
         const g = Math.floor(Math.random() * 256);
@@ -52,18 +56,18 @@ class MemoryButton {
 
 class UserInterface {
     constructor() {
-        this.promptLabel = document.getElementById("prompt-label");
-        this.inputField = document.getElementById("num-buttons");
-        this.goButton = document.getElementById("btn-go");
-        this.messageArea = document.getElementById("message-area");
-        this.gameArea = document.getElementById("game-area");
+        this.promptLabel = document.getElementById("prompt");
+        this.inputField = document.getElementById("numButtons");
+        this.goButton = document.getElementById("goButton");
+        this.messageArea = document.getElementById("messageContainer");
+        this.gameArea = document.getElementById("gameContainer");
 
         this.initializeText();
     }
 
     initializeText() {
         this.promptLabel.textContent = STRINGS.PROMPT_LABEL;
-        this.goButton.textContent = STRINGS.BTN_GO;
+        this.goButton.textContent = STRINGS.GO_BUTTON_LABEL;
     }
 
     getInputValue() {
@@ -104,7 +108,7 @@ class GameEngine {
         const num = this.ui.getInputValue();
         
         if (isNaN(num) || num < 3 || num > 7) {
-            this.ui.displayMessage(STRINGS.ERR_INVALID_INPUT);
+            this.ui.displayMessage(STRINGS.INVALID_INPUT);
             return;
         }
 
