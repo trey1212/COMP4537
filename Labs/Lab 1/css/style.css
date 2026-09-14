@@ -7,7 +7,7 @@ body {
     background-color: #f4f4f4;
 }
 
-#controls-area {
+#controlsContainer {
     padding: 10px 20px;
     background: white;
     border-bottom: 2px solid #ccc;
@@ -17,7 +17,7 @@ body {
     gap: 10px;
 }
 
-#message-area {
+#messageContainer {
     padding: 10px 20px;
     height: 30px;
     font-size: 1.5em;
@@ -25,14 +25,14 @@ body {
     color: #333;
 }
 
-#game-area {
+#gameContainer {
     position: relative;
     width: 100vw;
     /* Occupies the remaining viewport height */
     height: calc(100vh - 110px);
 }
 
-.memory-button {
+.memoryButton {
     height: 5em;
     width: 10em;
     display: inline-flex;

@@ -8,7 +8,7 @@ class MemoryButton {
     constructor(orderNumber, onClickCallback) {
         this.orderNumber = orderNumber;
         this.element = document.createElement("div");
-        this.element.className = "memory-button";
+        this.element.className = "memoryButton";
         this.element.textContent = this.orderNumber;
         this.element.style.backgroundColor = this.generateRandomColor();
         this.isClickable = false;
