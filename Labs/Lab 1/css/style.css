@@ -3,7 +3,6 @@ body {
     padding: 0;
     font-family: sans-serif;
     overflow: hidden;
-    /* Prevents scrollbars when items are near the edges */
     background-color: #f4f4f4;
 }
 
@@ -28,7 +27,6 @@ body {
 #gameContainer {
     position: relative;
     width: 100vw;
-    /* Occupies the remaining viewport height */
     height: calc(100vh - 110px);
 }
 
@@ -45,7 +43,6 @@ body {
     border: 2px solid black;
     position: absolute;
     cursor: default;
-    /* Changes dynamically via JS */
     border-radius: 4px;
     user-select: none;
 }
