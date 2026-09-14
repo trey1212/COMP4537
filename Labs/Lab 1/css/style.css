@@ -30,7 +30,7 @@ body {
     height: calc(100vh - 110px);
 }
 
-.memoryButton {
+.numberButton {
     height: 5em;
     width: 10em;
     display: inline-flex;
