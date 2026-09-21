@@ -12,13 +12,13 @@ body {
     color: #444;
 }
 
-.note-wrapper {
+.noteWrapper {
     display: flex;
     align-items: flex-start;
     margin-bottom: 15px;
 }
 
-textarea {
+textArea {
     width: 300px;
     height: 80px;
     margin-right: 15px;
@@ -33,21 +33,21 @@ button {
     font-weight: bold;
 }
 
-.remove-btn {
+.removeButton {
     background-color: #ff4d4d;
     color: white;
     border: none;
     border-radius: 4px;
 }
 
-#add-btn {
+#addButton {
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 4px;
 }
 
-#back-btn {
+#backButton {
     background-color: #555;
     color: white;
     border: none;
