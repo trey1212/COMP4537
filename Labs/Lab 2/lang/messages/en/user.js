@@ -1,8 +1,8 @@
 const strings = {
-    title: "Lab 1: JSON, Object Constructor, localStorage",
+    labTitle: "Lab 1: JSON, Object Constructor, localStorage",
     studentName: "Trey Tarrayo",
-    writerLink: "Go to Writer Page",
-    readerLink: "Go to Reader Page",
+    writerTitle: "Writer",
+    readerTitle: "Reader",
     addNote: "Add Note",
     removeNote: "Remove",
     back: "Back to Home",

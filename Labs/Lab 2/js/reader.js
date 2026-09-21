@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById("notes-container");
-    const timeDisplay = document.getElementById("time-display");
+    const container = document.getElementById("notesContainer");
+    const timeDisplay = document.getElementById("timeDisplay");
     let lastRetrievedString = null;
 
-    document.getElementById("page-title").textContent = strings.readerPageTitle;
-    document.getElementById("back-btn").textContent = strings.back;
+    document.getElementById("pageTitle").textContent = strings.readerPageTitle;
+    document.getElementById("backButton").textContent = strings.back;
 
     function retrieveNotes() {
         const storedNotes = localStorage.getItem("notes");
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const parsedNotes = JSON.parse(storedNotes);
                 parsedNotes.forEach(noteData => {
                     const wrapper = document.createElement("div");
-                    wrapper.className = "note-wrapper";
+                    wrapper.className = "noteWrapper";
                     
                     const textArea = document.createElement("textarea");
                     textArea.value = noteData.content;

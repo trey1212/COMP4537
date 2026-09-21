@@ -7,7 +7,7 @@ class Note {
     // Encapsulate the creation of the UI within the object itself
     createUI(container, removeCallback) {
         const wrapper = document.createElement("div");
-        wrapper.className = "note-wrapper";
+        wrapper.className = "noteWrapper";
 
         const textArea = document.createElement("textarea");
         textArea.value = this.content;
@@ -17,17 +17,17 @@ class Note {
             this.content = e.target.value;
         });
 
-        const removeBtn = document.createElement("button");
-        removeBtn.className = "remove-btn";
-        removeBtn.textContent = strings.removeNote; // Sourced from user.js
+        const removeButton = document.createElement("button");
+        removeButton.className = "removeButton";
+        removeButton.textContent = strings.removeNote; // Sourced from user.js
         
         // Trigger the callback to remove from array, DOM, and LocalStorage
-        removeBtn.addEventListener("click", () => {
+        removeButton.addEventListener("click", () => {
             removeCallback(this.id, wrapper);
         });
 
         wrapper.appendChild(textArea);
-        wrapper.appendChild(removeBtn);
+        wrapper.appendChild(removeButton);
         container.appendChild(wrapper);
     }
 }

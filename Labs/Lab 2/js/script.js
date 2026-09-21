@@ -3,8 +3,8 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("main-title").textContent = strings.title;
-    document.getElementById("student-name").textContent = strings.studentName;
-    document.getElementById("writer-link").textContent = strings.writerLink;
-    document.getElementById("reader-link").textContent = strings.readerLink;
+    document.getElementById("labTitle").textContent = strings.title;
+    document.getElementById("studentName").textContent = strings.studentName;
+    document.getElementById("writerLink").textContent = strings.writerLink;
+    document.getElementById("readerLink").textContent = strings.readerLink;
 });

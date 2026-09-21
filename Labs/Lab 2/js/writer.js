@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const timeDisplay = document.getElementById("time-display");
 
     // Initialize string resources from user.js
-    document.getElementById("page-title").textContent = strings.writerPageTitle;
-    document.getElementById("add-btn").textContent = strings.addNote;
-    document.getElementById("back-btn").textContent = strings.back;
+    document.getElementById("pageTitle").textContent = strings.writerPageTitle;
+    document.getElementById("addButton").textContent = strings.addNote;
+    document.getElementById("backButton").textContent = strings.back;
 
     // Retrieve existing notes on load
     const storedNotes = localStorage.getItem("notes");
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Add new note functionality
-    document.getElementById("add-btn").addEventListener("click", () => {
+    document.getElementById("addButton").addEventListener("click", () => {
         const note = new Note(noteCounter++, "");
         notesArray.push(note);
         note.createUI(container, removeNote);
