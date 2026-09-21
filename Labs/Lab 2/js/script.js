@@ -1,5 +1,3 @@
-import { STRINGS } from "../lang/messages/en/user.js";
-
 /*
  * Author: Romeo Jose Tarrayo (Trey) - A01455838
  */

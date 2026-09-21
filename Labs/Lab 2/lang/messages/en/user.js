@@ -1,5 +1,4 @@
-// AI DISCLOSURE: Parts of this code were generated with the assistance of ChatGPT/AI.
-export const strings = {
+const strings = {
     title: "Lab 1: JSON, Object Constructor, localStorage",
     studentName: "Trey Tarrayo",
     writerLink: "Go to Writer Page",
