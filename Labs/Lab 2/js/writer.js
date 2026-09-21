@@ -1,0 +1,50 @@
+document.addEventListener("DOMContentLoaded", () => {
+    let notesArray = [];
+    let noteCounter = 0;
+    const container = document.getElementById("notes-container");
+    const timeDisplay = document.getElementById("time-display");
+
+    // Initialize string resources from user.js
+    document.getElementById("page-title").textContent = strings.writerPageTitle;
+    document.getElementById("add-btn").textContent = strings.addNote;
+    document.getElementById("back-btn").textContent = strings.back;
+
+    // Retrieve existing notes on load
+    const storedNotes = localStorage.getItem("notes");
+    if (storedNotes) {
+        const parsedNotes = JSON.parse(storedNotes);
+        parsedNotes.forEach(noteData => {
+            const note = new Note(noteCounter++, noteData.content);
+            notesArray.push(note);
+            note.createUI(container, removeNote);
+        });
+    }
+
+    // Add new note functionality
+    document.getElementById("add-btn").addEventListener("click", () => {
+        const note = new Note(noteCounter++, "");
+        notesArray.push(note);
+        note.createUI(container, removeNote);
+    });
+
+    // Method passed to Note instances to handle self-deletion
+    function removeNote(id, wrapperDOM) {
+        notesArray = notesArray.filter(n => n.id !== id);
+        wrapperDOM.remove();
+        saveNotes(); // Saves to local storage instantly upon removal
+    }
+
+    // Serialize and save to LocalStorage
+    function saveNotes() {
+        // Map the array of Note objects to just their content for JSON storage
+        const dataToSave = notesArray.map(n => ({ content: n.content }));
+        localStorage.setItem("notes", JSON.stringify(dataToSave));
+        
+        const now = new Date();
+        timeDisplay.textContent = strings.lastSaved + now.toLocaleTimeString();
+    }
+
+    // Fulfill 2-second interval requirement
+    setInterval(saveNotes, 2000);
+    saveNotes(); // Initial save to display the starting timestamp
+});
