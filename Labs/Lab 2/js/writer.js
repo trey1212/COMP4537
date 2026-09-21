@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     let notesArray = [];
     let noteCounter = 0;
-    const container = document.getElementById("notes-container");
-    const timeDisplay = document.getElementById("time-display");
+    
+    // Updated to match the new camelCase IDs in writer.html
+    const container = document.getElementById("notesContainer");
+    const timeDisplay = document.getElementById("timeDisplay");
 
     // Initialize string resources from user.js
     document.getElementById("pageTitle").textContent = strings.writerPageTitle;
