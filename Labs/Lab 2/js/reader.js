@@ -6,10 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("pageTitle").textContent = strings.readerPageTitle;
     document.getElementById("backButton").textContent = strings.back;
 
+    /**
+     * Retrieves notes from the localStorage and DOM if there are changes
+     */
     function retrieveNotes() {
         const storedNotes = localStorage.getItem("notes");
         
-        // Rebuild DOM only if content changed to prevent cursor flashing/scrolling issues
+        // Rebuild the DOM if the content has changed
         if (storedNotes !== lastRetrievedString) {
             container.innerHTML = ""; 
             

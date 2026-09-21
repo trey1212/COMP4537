@@ -1,10 +1,22 @@
+/**
+ * Represents a note with an ID and content
+ */
 class Note {
+    /**
+     * Note constructor
+     * @param {*} id - ID of the note
+     * @param {*} content - content of the note
+     */
     constructor(id, content = "") {
         this.id = id;
         this.content = content;
     }
 
-    // Encapsulate the creation of the UI within the object itself
+    /**
+     * Creates the UI for the note and displays the note's content
+     * @param {*} container - The container element to append the note UI to
+     * @param {*} removeCallback - The callback function to handle note removal
+     */
     createUI(container, removeCallback) {
         const wrapper = document.createElement("div");
         wrapper.className = "noteWrapper";
@@ -19,9 +31,9 @@ class Note {
 
         const removeButton = document.createElement("button");
         removeButton.className = "removeButton";
-        removeButton.textContent = strings.removeNote; // Sourced from user.js
+        removeButton.textContent = strings.removeNote;
         
-        // Trigger the callback to remove from array, DOM, and LocalStorage
+        // Callback to remove note from array, DOM, and localStorage
         removeButton.addEventListener("click", () => {
             removeCallback(this.id, wrapper);
         });
