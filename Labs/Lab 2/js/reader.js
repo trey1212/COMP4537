@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Rebuild the DOM if the content has changed
         if (storedNotes !== lastRetrievedString) {
-            container.innerHTML = ""; 
+            container.innerHTML = "";
             
             if (storedNotes) {
                 const parsedNotes = JSON.parse(storedNotes);

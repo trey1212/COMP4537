@@ -13,7 +13,7 @@ class Note {
     }
 
     /**
-     * Creates the UI for the note and displays the note's content
+     * Creates the UI for the note, buttons, and displays the note's content
      * @param {*} container - The container element to append the note UI to
      * @param {*} removeCallback - The callback function to handle note removal
      */
